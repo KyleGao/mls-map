@@ -17,9 +17,9 @@ var markerClusters = L.markerClusterGroup();
 
 for ( var i = 0; i < marks.length; ++i )
 {
+  var popup = marks[i].Country
 
-
-  var m = L.marker( [marks[i].lat, marks[i].lng]);
+  var m = L.marker( [marks[i].lat, marks[i].lng]).bindPopup( popup );
 
   markerClusters.addLayer( m );
 }
