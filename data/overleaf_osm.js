@@ -29,24 +29,24 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 // map.addLayer( markerClusters );
 //''mim','clisci','cb','epibiostats','sp','mls','psc','eco','immed','rna','znz','bsm','nan','sysbio','mtb','biomed','ddnz',
-var cluster_mim = L.markerClusterGroup();
-var cluster_clisci = L.markerClusterGroup();
-var cluster_cb = L.markerClusterGroup();
-var cluster_epibiostats = L.markerClusterGroup();
-var cluster_sp = L.markerClusterGroup();
-var cluster_mls = L.markerClusterGroup();
-var cluster_psc = L.markerClusterGroup();
-var cluster_eco = L.markerClusterGroup();
-var cluster_immed = L.markerClusterGroup();
-var cluster_rna = L.markerClusterGroup();
-var cluster_znz = L.markerClusterGroup();
-var cluster_bsm = L.markerClusterGroup();
-var cluster_nan = L.markerClusterGroup();
-var cluster_sysbio = L.markerClusterGroup();
-var cluster_mtb = L.markerClusterGroup();
-var cluster_biomed = L.markerClusterGroup();
-var cluster_ddnz = L.markerClusterGroup();
 var cluster_all = L.markerClusterGroup();
+var cluster_biomed = L.markerClusterGroup();
+var cluster_bsm = L.markerClusterGroup();
+var cluster_cb = L.markerClusterGroup();
+var cluster_clisci = L.markerClusterGroup();
+var cluster_ddnz = L.markerClusterGroup();
+var cluster_eco = L.markerClusterGroup();
+var cluster_epibiostats = L.markerClusterGroup();
+var cluster_immed = L.markerClusterGroup();
+var cluster_mim = L.markerClusterGroup();
+var cluster_mls = L.markerClusterGroup();
+var cluster_mtb = L.markerClusterGroup();
+var cluster_nan = L.markerClusterGroup();
+var cluster_psc = L.markerClusterGroup();
+var cluster_rna = L.markerClusterGroup();
+var cluster_sp = L.markerClusterGroup();
+var cluster_sysbio = L.markerClusterGroup();
+var cluster_znz = L.markerClusterGroup();
 
 function makeMarkers(list, cluster){
   for ( var i = 0; i < list.length; ++i )
@@ -61,46 +61,46 @@ function makeMarkers(list, cluster){
   }
 };
 
-makeMarkers(mim, cluster_mim);
-makeMarkers(clisci, cluster_clisci);
-makeMarkers(cb, cluster_cb);
-makeMarkers(epibiostats, cluster_epibiostats);
-makeMarkers(sp, cluster_sp);
-makeMarkers(mls, cluster_mls);
-makeMarkers(psc, cluster_psc);
-makeMarkers(eco, cluster_eco);
-makeMarkers(immed, cluster_immed);
-makeMarkers(rna, cluster_rna);
-makeMarkers(znz, cluster_znz);
-makeMarkers(bsm, cluster_bsm);
-makeMarkers(nan, cluster_nan);
-makeMarkers(sysbio, cluster_sysbio);
-makeMarkers(mtb, cluster_mtb);
 makeMarkers(biomed, cluster_biomed);
+makeMarkers(bsm, cluster_bsm);
+makeMarkers(cb, cluster_cb);
+makeMarkers(clisci, cluster_clisci);
 makeMarkers(ddnz, cluster_ddnz);
+makeMarkers(eco, cluster_eco);
+makeMarkers(epibiostats, cluster_epibiostats);
+makeMarkers(immed, cluster_immed);
+makeMarkers(mim, cluster_mim);
+makeMarkers(mls, cluster_mls);
+makeMarkers(mtb, cluster_mtb);
+makeMarkers(nan, cluster_nan);
+makeMarkers(psc, cluster_psc);
+makeMarkers(rna, cluster_rna);
+makeMarkers(sp, cluster_sp);
+makeMarkers(sysbio, cluster_sysbio);
+makeMarkers(znz, cluster_znz);
 
 
 
 
 var overlayMaps = {
   "ALL": cluster_all,
-  "MIM": cluster_mim,
-  "CliSc": cluster_clisci,
-  "CB": cluster_cb,
-  "EpiBi": cluster_epibiostats,
-  "S&P": cluster_sp,
-  "MLS": cluster_mls,
-  "PSC": cluster_psc,
-  "Eco": cluster_eco,
-  "imMed": cluster_immed,
-  "RNA": cluster_rna,
-  "ZNZ": cluster_znz,
+  "BioMed": cluster_biomed,
   "BSM": cluster_bsm,
-  "EB": cluster_nan,
-  "SysBi": cluster_sysbio,
+  "CB": cluster_cb,
+  "CliSci": cluster_clisci,
+  "DDNZ": cluster_ddnz,
+  "Eco": cluster_eco,
+  "Epi": cluster_epibiostats,
+  "EvoBio": cluster_nan,
+  "imMed": cluster_immed,
+  "MIM": cluster_mim,
+  "MLS": cluster_mls,
   "MTB": cluster_mtb,
-  "BioMe": cluster_biomed,
-  "DDNZ": cluster_ddnz
+  "PSC": cluster_psc,
+  "RNA": cluster_rna,
+  "S&P": cluster_sp,
+  "SysBio": cluster_sysbio,
+  "ZNZ": cluster_znz,
 };
 
 map.addLayer( cluster_all );
