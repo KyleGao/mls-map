@@ -28,9 +28,24 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 // }
 
 // map.addLayer( markerClusters );
-
-var cluster_imls = L.markerClusterGroup();
-var cluster_neuro = L.markerClusterGroup();
+//''mim','clisci','cb','epibiostats','sp','mls','psc','eco','immed','rna','znz','bsm','nan','sysbio','mtb','biomed','ddnz',
+var cluster_mim = L.markerClusterGroup();
+var cluster_clisci = L.markerClusterGroup();
+var cluster_cb = L.markerClusterGroup();
+var cluster_epibiostats = L.markerClusterGroup();
+var cluster_sp = L.markerClusterGroup();
+var cluster_mls = L.markerClusterGroup();
+var cluster_psc = L.markerClusterGroup();
+var cluster_eco = L.markerClusterGroup();
+var cluster_immed = L.markerClusterGroup();
+var cluster_rna = L.markerClusterGroup();
+var cluster_znz = L.markerClusterGroup();
+var cluster_bsm = L.markerClusterGroup();
+var cluster_nan = L.markerClusterGroup();
+var cluster_sysbio = L.markerClusterGroup();
+var cluster_mtb = L.markerClusterGroup();
+var cluster_biomed = L.markerClusterGroup();
+var cluster_ddnz = L.markerClusterGroup();
 var cluster_all = L.markerClusterGroup();
 
 function makeMarkers(list, cluster){
@@ -46,15 +61,46 @@ function makeMarkers(list, cluster){
   }
 };
 
-makeMarkers(imls, cluster_imls);
-makeMarkers(neuro, cluster_neuro);
-// cluster_all = cluster_imls + cluster_neuro;
+makeMarkers(mim, cluster_mim);
+makeMarkers(clisci, cluster_clisci);
+makeMarkers(cb, cluster_cb);
+makeMarkers(epibiostats, cluster_epibiostats);
+makeMarkers(sp, cluster_sp);
+makeMarkers(mls, cluster_mls);
+makeMarkers(psc, cluster_psc);
+makeMarkers(eco, cluster_eco);
+makeMarkers(immed, cluster_immed);
+makeMarkers(rna, cluster_rna);
+makeMarkers(znz, cluster_znz);
+makeMarkers(bsm, cluster_bsm);
+makeMarkers(nan, cluster_nan);
+makeMarkers(sysbio, cluster_sysbio);
+makeMarkers(mtb, cluster_mtb);
+makeMarkers(biomed, cluster_biomed);
+makeMarkers(ddnz, cluster_ddnz);
+
+
 
 
 var overlayMaps = {
-    "ALL": cluster_all,
-    "IMLS": cluster_imls,
-    "NEURO": cluster_neuro
+  "ALL": cluster_all,
+  "MIM": cluster_mim,
+  "CliSc": cluster_clisci,
+  "CB": cluster_cb,
+  "EpiBi": cluster_epibiostats,
+  "S&P": cluster_sp,
+  "MLS": cluster_mls,
+  "PSC": cluster_psc,
+  "Eco": cluster_eco,
+  "imMed": cluster_immed,
+  "RNA": cluster_rna,
+  "ZNZ": cluster_znz,
+  "BSM": cluster_bsm,
+  "EB": cluster_nan,
+  "SysBi": cluster_sysbio,
+  "MTB": cluster_mtb,
+  "BioMe": cluster_biomed,
+  "DDNZ": cluster_ddnz
 };
 
 map.addLayer( cluster_all );
